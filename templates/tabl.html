@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+  <link rel="stylesheet" href="{{url_for('static',filename='table/f.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='table/k.css')}}">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- The form -->
+<form class="example" action="/search/{{new}}/" method="get">
+    <input type="text" name="query" id="query" placeholder="search for school near {{new}}">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+</head>
+
+<!-- Load icon library -->
+
+
+
+
+
+
+<body>
+
+
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+
+
+
+
+
+					<table>
+						<thead>
+						<thead>
+						<tr>
+							<th>Sno</th>
+							<th>name</th>
+							<th>location</th>
+							<th>address</th>
+						</thead>
+						<tbody>
+
+						{% for i in final %}
+						<tr>
+							<td>{{i.sno}}</td>
+							<td>{{i.school_name}}</td>
+							<td>{{i.location}}</td>
+							<td>{{i.address}}</td>
+						</tr>
+						{% endfor %}
+						</tbody>
+					</table>
+
+						</tbody>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+</html>
+
+
